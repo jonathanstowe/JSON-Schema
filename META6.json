@@ -1,0 +1,36 @@
+{
+  "name": "JSON::Schema",
+  "source-url": "https://github.com/jonathanstowe/JSON-Schema.git",
+  "support": {
+    "source": "https://github.com/jonathanstowe/JSON-Schema.git",
+    "bugtracker" : "https://github.com/jonathanstowe/JSON-Schema/issues",
+    "email" : "Jonathan Stowe <jns+gh@gellyfish.co.uk>"
+  },
+  "perl": "6.c",
+  "resources": [
+  ],
+  "build-depends": [
+  ],
+  "auth": "github:jonathanstowe",
+  "depends": [
+    "JSON::Class"
+  ],
+  "tags": [
+      "json",
+      "schema",
+      "validate"
+  ],
+  "license": "Artistic-2.0",
+  "test-depends": [
+      "Test"
+  ],
+  "provides": {
+    "JSON::Schema": "lib/JSON/Schema.pm"
+  },
+  "version": "0.0.1",
+  "meta-version": "0",
+  "authors": [
+    "Jonathan Stowe <jns+gh@gellyfish.co.uk>"
+  ],
+  "description": "Parse and create JSON Schema documents"
+}
