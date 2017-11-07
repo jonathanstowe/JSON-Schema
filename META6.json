@@ -13,7 +13,7 @@
   ],
   "auth": "github:jonathanstowe",
   "depends": [
-    "JSON::Class"
+    "JSON::Fast"
   ],
   "tags": [
       "json",
@@ -22,7 +22,8 @@
   ],
   "license": "Artistic-2.0",
   "test-depends": [
-      "Test"
+      "Test",
+      "JSON::Fast"
   ],
   "provides": {
     "JSON::Schema": "lib/JSON/Schema.pm"

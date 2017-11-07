@@ -1,8 +1,30 @@
 use v6.c;
 
-use JSON::Class;
+class JSON::Schema {
+    subset SchemaType of Str where any("null", "boolean", "object", "array", "number", "string", "integer");
+    has SchemaType $.type is required;
 
-class JSON::Schema does JSON::Class {
+    proto method validate(|c) { * }
+
+    multi method validate($instance --> Bool ) {
+        self.validate($!type, $instance);
+    }
+
+    multi method validate('null', Mu:U $ --> Bool){
+        True;
+    }
+
+    multi method validate('null', Mu:D $ --> Bool){
+        False;
+    }
+
+    multi method validate('boolean', Bool $ --> Bool) {
+        True;
+    }
+    multi method validate('boolean', $ --> Bool) {
+        False;
+    }
+
 
 }
 
